@@ -1,0 +1,86 @@
+@import url('https://fonts.googleapis.com/css2?family=Lato:wght@400;700&display=swap');
+
+/* VARIABLES */
+:root {
+    /* COLORS */
+    --first-color: rgba(255,255,255,.9);
+    --second-color: rgba(255,255,255,.75);
+    --third-color: rgba(0,0,0,0.75);
+    --white-color: #fff;
+    --black-color: #333;
+
+    /* TYPOGRAPHY */
+    --font: "Lato", sans-serif;
+    --button-font-size: 2rem;
+    --big-font-size: 3rem;
+    --md-font-size: rem;
+}
+
+/* BASE */
+* {
+    box-sizing: border-box;
+    font-weight: 400;
+    margin: 0;
+    padding: 0;
+}
+
+html {
+    font-size: 10px;
+}
+
+body {
+    font-family: var(--font);
+    background: linear-gradient(to right, #e23d3d, #7fe24e);
+    color: var(--black-color);
+}
+
+/* CALCULATOR  */
+.calculator__wrapper {
+    display: grid;
+    justify-content: center;
+    align-content: center;
+    grid-template-columns: repeat(4, 80px);
+    grid-template-rows: minmax(100px, auto) repeat(5, 80px);
+    min-height: 100vh;
+}
+
+.calculator__output {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-around;
+    align-items: flex-end;
+    grid-column: 1/-1;
+    background-color: var(--third-color);
+    padding: 10px;
+    word-wrap: break-word;
+    word-break: break-all;
+}
+
+.calculator__previous-operand {
+    font-size: var(--md-font-size);
+    color: var(--second-color);
+}
+
+.calculator__current-operand {
+    font-size: var(--big-font-size);
+    color: var(--white-color);
+    font-weight: 700; 
+}
+
+.calculator__button {
+    font-family: var(--font);
+    font-size: var(--button-font-size);
+    color: var(--third-color);
+    outline: 0;
+    border: 2px solid var(--white-color);
+    background-color: var(--first-color);
+    cursor: pointer;
+}
+
+.calculator__button:hover {
+    background-color: var(--second-color);
+}
+
+.span-two {
+    grid-column: span 2;
+}
